@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "journals",
+  "info": {
+    "name": "Journal",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "author": {
+      "type": "string",
+      "required": true
+    },
+    "date": {
+      "type": "datetime"
+    },
+    "timeToRead": {
+      "type": "integer"
+    },
+    "excerpt": {
+      "type": "richtext"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "path": {
+      "type": "string",
+      "required": true,
+      "regex": "^/journal/.*",
+      "unique": true
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "kind": "collectionType",
+  "collectionName": "posts",
+  "info": {
+    "name": "Project",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "date": {
+      "type": "date"
+    },
+    "project_bg_color": {
+      "type": "string",
+      "regex": "^#[0-9a-zA-Z]{4}"
+    },
+    "project_fg_color": {
+      "type": "string",
+      "regex": "^#[0-9a-zA-Z]{4}"
+    },
+    "thumbnail": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "categories": {
+      "collection": "category",
+      "via": "projects",
+      "dominant": true
+    },
+    "category": {
+      "type": "string"
+    },
+    "path": {
+      "type": "string",
+      "regex": "^/.+",
+      "required": true,
+      "unique": true
+    }
+  }
+}

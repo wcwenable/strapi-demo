@@ -1,0 +1,35 @@
+{
+  "kind": "singleType",
+  "collectionName": "themes",
+  "info": {
+    "name": "theme",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "footer": {
+      "type": "string",
+      "required": true
+    },
+    "site_name": {
+      "type": "string"
+    },
+    "dark_mode": {
+      "type": "boolean"
+    },
+    "site_description": {
+      "type": "richtext"
+    },
+    "hero_title": {
+      "type": "string"
+    },
+    "hero_subtitle": {
+      "type": "richtext"
+    }
+  }
+}
